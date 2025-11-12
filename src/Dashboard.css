@@ -1,0 +1,410 @@
+:root[data-theme="light"] {
+    --bg-primary: #fff5f8;
+    --bg-secondary: #ffffff;
+    --text-primary: #2d2d2d;
+    --text-secondary: #666666;
+    --accent-pink: #ff69b4;
+    --accent-purple: #9b59b6;
+    --border-color: #ffe0ec;
+    --shadow: rgba(255, 105, 180, 0.1);
+  }
+  
+  :root[data-theme="dark"] {
+    --bg-primary: #1a1a2e;
+    --bg-secondary: #16213e;
+    --text-primary: #eee;
+    --text-secondary: #bbb;
+    --accent-pink: #ff85c0;
+    --accent-purple: #b57edc;
+    --border-color: #2d3561;
+    --shadow: rgba(0, 0, 0, 0.3);
+  }
+  
+  .dashboard {
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .age-selection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .welcome-container {
+    text-align: center;
+    max-width: 800px;
+  }
+  
+  .welcome-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .welcome-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+  }
+  
+  .about-section {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 20px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 20px var(--shadow);
+    border: 2px solid var(--border-color);
+  }
+  
+  .about-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: var(--accent-pink);
+  }
+  
+  .about-section p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+  
+  .era-title {
+    font-size: 1.8rem;
+    margin: 2rem 0 1.5rem;
+    color: var(--text-primary);
+  }
+  
+  .age-selection-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .age-btn {
+    background: var(--bg-secondary);
+    border: 3px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    box-shadow: 0 4px 20px var(--shadow);
+  }
+  
+  .age-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px var(--shadow);
+  }
+  
+  .age-12-16:hover {
+    border-color: var(--accent-pink);
+  }
+  
+  .age-17-25:hover {
+    border-color: var(--accent-purple);
+  }
+  
+  .age-icon {
+    font-size: 3rem;
+  }
+  
+  .era-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .age-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+  }
+  
+  .age-desc {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+  }
+  
+  .dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    box-shadow: 0 4px 20px var(--shadow);
+  }
+  
+  .dashboard-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .era-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .age-badge {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  
+  .settings-icon-btn {
+    background: var(--bg-primary);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  
+  .settings-icon-btn:hover {
+    transform: rotate(90deg);
+    background: var(--accent-pink);
+  }
+  
+  .quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  .action-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px var(--shadow);
+  }
+  
+  .action-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-pink);
+  }
+  
+  .action-icon {
+    font-size: 2.5rem;
+  }
+  
+  .action-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-primary);
+  }
+  
+  .action-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  .content-sections {
+    margin-top: 2rem;
+  }
+  
+  .sections-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary);
+  }
+  
+  .sections-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .section-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    box-shadow: 0 4px 15px var(--shadow);
+  }
+  
+  .section-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-purple);
+  }
+  
+  .section-icon {
+    font-size: 2.5rem;
+  }
+  
+  .section-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-primary);
+  }
+  
+  .section-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
+  /* Settings Page */
+  .settings-page {
+    min-height: 100vh;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+  }
+  
+  .settings-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .back-btn {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+    color: var(--text-primary);
+    transition: all 0.3s;
+  }
+  
+  .back-btn:hover {
+    background: var(--accent-pink);
+    color: white;
+    border-color: var(--accent-pink);
+  }
+  
+  .settings-header h1 {
+    font-size: 2rem;
+  }
+  
+  .settings-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .setting-card {
+    background: var(--bg-secondary);
+    border: 2px solid var(--border-color);
+    border-radius: 15px;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px var(--shadow);
+  }
+  
+  .setting-info h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+  }
+  
+  .setting-info p {
+    color: var(--text-secondary);
+  }
+  
+  .theme-toggle, .change-btn, .clear-btn {
+    background: linear-gradient(135deg, var(--accent-pink), var(--accent-purple));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .theme-toggle:hover, .change-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px var(--shadow);
+  }
+  
+  .clear-btn {
+    background: #e74c3c;
+  }
+  
+  .clear-btn:hover {
+    background: #c0392b;
+  }
+  
+  .toggle-icon {
+    font-size: 1.2rem;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .dashboard {
+      padding: 1rem;
+    }
+  
+    .welcome-title {
+      font-size: 2rem;
+    }
+  
+    .age-selection-buttons {
+      grid-template-columns: 1fr;
+    }
+  
+    .setting-card {
+      flex-direction: column;
+      gap: 1rem;
+      text-align: center;
+    }
+  
+    .dashboard-header {
+      flex-direction: column;
+      text-align: center;
+      gap: 1rem;
+    }
+  
+    .quick-actions {
+      grid-template-columns: 1fr;
+    }
+  
+    .sections-grid {
+      grid-template-columns: 1fr;
+    }
+  }
